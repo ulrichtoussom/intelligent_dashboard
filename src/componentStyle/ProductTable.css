@@ -1,0 +1,87 @@
+
+
+:root {
+    --primary-neon: #00d2ff;
+    --secondary-neon: #3a7bd5;
+    --bg-dark: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --success-glow: #00ff88;
+    --danger-glow: #ff4757;
+  }
+  
+  /* Conteneur de la table */
+  .product-list-container {
+    padding: 20px;
+    background: var(--bg-dark);
+    border-radius: 20px;
+    color: white;
+  }
+  
+  /* En-tête de la liste (pour remplacer <thead>) */
+  .product-header {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding: 15px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-neon);
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+  .title {
+    align-self: center ;
+  }
+  
+  /* La ligne (ton composant Row) */
+  .product-row {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    background: var(--card-bg);
+    margin-bottom: 12px;
+    padding: 20px 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Effet de lueur au survol */
+  .product-row:hover {
+    transform: translateY(-3px) scale(1.01);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
+  }
+  
+  /* Style pour le prix */
+  .product-price {
+    font-family: 'Orbitron', sans-serif; /* Une police futuriste si tu en as une */
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Badge de stock dynamique */
+  .status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .status-in {
+    background: rgba(0, 255, 136, 0.1);
+    color: var(--success-glow);
+    border: 1px solid var(--success-glow);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+  }
+  
+  .status-out {
+    background: rgba(255, 71, 87, 0.1);
+    color: var(--danger-glow);
+    border: 1px solid var(--danger-glow);
+  }

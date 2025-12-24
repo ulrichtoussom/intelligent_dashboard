@@ -3,6 +3,7 @@
 import { useMemo } from "react"
 import Row from "./Row"
 
+import '../componentStyle/ProductTable.css'
 
 
 /**
@@ -45,17 +46,18 @@ function ProductTable({albums, search, check}){
 
     return(
         <>
-            <table className="table table-hover table-primary table-striped">
-                <thead>
-                    <tr><th  style={{color:'red'}} className="text-end">userId</th><th  style={{color:'red'}} className="text-center">Title</th><th>Available</th></tr>
-                </thead>
-                <tbody>
+            <div className="product-list-container">
+                <div className="product-header">
+                    <span>userId</span>
+                    <span className="title">Title</span>
+                    <span>Available</span>
+                </div>
 
-                    {filterProduct.map(album => <Row key={album.id} userID={album.id} title={album.title} check={album.available} />)}
-                    
-                </tbody>
+                {filterProduct.map(album => <Row key={album.id} userID={album.id} title={album.title} check={album.available} />)}
 
-            </table>
+            </div>
+
+                         
         
         </>
     )

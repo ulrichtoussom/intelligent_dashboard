@@ -7,8 +7,10 @@ import ProductTable from './component/ProductTable'
 import { useProduct } from './hooks/useProduct'
 import { useEffect, useRef, useState } from 'react'
 import  Checkbox   from './component/Checkbox'
+import DisplayTime from './component/DisplayTime'
 
 function App() {
+
 
   const {loading, data}   = useProduct()
   const [search , setSearch] = useState('')
@@ -24,6 +26,8 @@ function App() {
 
   return (
     <div className='container my-3'>
+
+      <DisplayTime />
 
       <Input ref={targetRef} value={search} handleSearch={setSearch} />
       <Checkbox check={available} toggleChecked ={setAvailable} />
