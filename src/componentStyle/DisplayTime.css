@@ -1,0 +1,65 @@
+
+.clock-container{
+    display : flex ;
+    justify-content: center;
+  
+}
+
+.clock-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 15px 25px;
+    box-shadow:  0 8px 34px 0 rgba(31, 38, 135, 0.15);
+    text-align: center;
+    min-width: 200px;
+}
+
+.clock-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #636e72;
+    margin-bottom: 5px;
+}
+
+
+.clock-display {
+    font-family: 'Courier New', Courier, monospace; /* Style digital */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3436;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.time-unit {
+    background: #2d3436;
+    color: #fab1a0; /* Une couleur qui flashe un peu */
+    padding: 5px 10px;
+    border-radius: 8px;
+    min-width: 45px;
+}
+
+.time-separator {
+    color: #2d3436;
+    animation: blink 1s infinite; /* Pour faire clignoter les : */
+}
+
+.seconds {
+    color: #ff7675; /* Les secondes en une autre couleur */
+}
+
+/* Animation de clignotement */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+  }
+
+  
+  
